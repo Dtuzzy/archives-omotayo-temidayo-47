@@ -14,7 +14,7 @@ public class createTable {
 		// surround connection with try/catch to handle exceptions
 		try {
 			Class.forName("org.sqlite.JDBC");
-			Connection conn = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Public\\edubin.db");
+			Connection conn = DriverManager.getConnection("jdbc:sqlite:database");
 			conn.setAutoCommit(false);
 
 			return conn;
@@ -30,7 +30,7 @@ public class createTable {
 			// call JDBC connection class
 			Class.forName("org.sqlite.JDBC");
 			// instantiate connection variable and use deriver manager
-			Connection c = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Public\\edubin.db");
+			Connection c = DriverManager.getConnection("jdbc:sqlite:database");
 			System.out.println("Opened Database successfully!!");
 
 			Statement stmt = c.createStatement();
