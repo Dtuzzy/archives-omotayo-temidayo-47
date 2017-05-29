@@ -11,9 +11,6 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.WindowConstants;
 
-import org.icepdf.ri.common.SwingController;
-import org.icepdf.ri.common.SwingViewBuilder;
-import org.icepdf.ri.util.PropertiesManager;
 
 public class courses {
 
@@ -22,16 +19,7 @@ public class courses {
 		rad.setTitle("Edusoft");
 		rad.setIconImage(new ImageIcon(getClass().getResource("images/edu_ico.png")).getImage());
 		java.net.URL filePath = this.getClass().getResource("courses/thermo.pdf");
-		SwingController controller = new SwingController();
-
-		SwingViewBuilder factory = new SwingViewBuilder(controller);
-
-		PropertiesManager prop = new PropertiesManager(System.getProperties(),
-				ResourceBundle.getBundle(PropertiesManager.DEFAULT_MESSAGE_BUNDLE));
-		prop.set(PropertiesManager.PROPERTY_DEFAULT_ZOOM_LEVEL, "1.75");
-
-		JPanel vcp = factory.buildViewerPanel();
-		controller.openDocument(filePath);
+		//pdf library to open the course goes in here....
 
 		rad.add(vcp);
 		rad.setResizable(true);
