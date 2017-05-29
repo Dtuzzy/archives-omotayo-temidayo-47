@@ -80,11 +80,8 @@ public class SearchEngine {
 	public class SearchHandler implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			courses crs = new courses();
-			String paper = search_txt.getText();
-			if (paper == "thermo")
-				System.out.println("Button click");
-			crs.openThatCourse();
+			//implement search strings
+			
 		}
 	}
 }
